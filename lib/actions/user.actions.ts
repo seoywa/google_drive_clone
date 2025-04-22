@@ -6,6 +6,7 @@ import { appwriteConfig } from "@/appwrite/config";
 import { ID, Query } from "node-appwrite";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { avatarPlaceholderUrl } from "@/constants";
 
 const handleError = (error: unknown, message: string) => {
   console.log(error, message);
@@ -56,7 +57,7 @@ export const createAccount = async ({ fullName, email}: {fullName: string, email
       {
         fullName,
         email,
-        avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKdSqiXcyHoG_xQ6t-bVRnUQhyQT7AbiUJzy6lrA_9l8aE6f_M4nvsdE&s',
+        avatar: avatarPlaceholderUrl,
         accountId,
       }
     );
