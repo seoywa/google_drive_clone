@@ -27,7 +27,7 @@ interface Props {
 }
 
 const MobileNavigation = ({ $id: ownerId, accountId, fullName, avatar, email }: Props) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
   return (
